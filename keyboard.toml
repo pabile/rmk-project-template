@@ -1,11 +1,11 @@
 # Documentation: https://haobogu.github.io/rmk/keyboard_configuration.html
 [keyboard]
-name = "P60RMK Keyboard"
-product_name = "P60RMK Keyboard"
-vendor_id = "0x8065"
-product_id = "0x4643"
-manufacturer = "Pabile"
-board = "pi_pico_w"
+name = Pabile60
+product_name = Pabile60
+vendor_id = 0x8065
+product_id = 0x4643
+manufacturer = Pabile
+board = pi_pico_w
 #chip = "rp2040"
 
 [ble]
