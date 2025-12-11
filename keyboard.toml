@@ -1,36 +1,56 @@
 # Documentation: https://haobogu.github.io/rmk/keyboard_configuration.html
 [keyboard]
-name = "RMK Keyboard"
-product_name = "RMK Keyboard"
-vendor_id = 0x4c4b
+name = "P60RMK Keyboard"
+product_name = "P60RMK Keyboard"
+vendor_id = 0x8065
 product_id = 0x4643
-manufacturer = "haobo"
+manufacturer = "0x8060"
 chip = "rp2040"
 
 [matrix]
 # Input and output pins are mandatory
-input_pins = ["PIN_6", "PIN_7", "PIN_8", "PIN_9"]
-output_pins = ["PIN_19", "PIN_20", "PIN_21"]
+input_pins = ["PIN_31", "PIN_29", "PIN_27", "PIN_26", "PIN_25", "PIN_24", "PIN_22", "PIN_11", "PIN_14", "PIN_15"]
+output_pins = ["PIN_21", "PIN_2", "PIN_6", "PIN_7", "PIN_9", "PIN_10"]
 # WARNING: Currently row2col/col2row is set in RMK's feature gate, configs here do nothing actually
 # row2col = true
 
 [layout]
-rows = 4
-cols = 3
-layers = 2
+rows = 6
+cols = 10
+layers = 4
+matrix_map = """
+    (0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (5,0) (5,1) (5,2) (5,3) (5,4) (5,5) 
+    (1,0) (1,1) (1,2) (1,3) (1,4) (1,5) (6,0) (6,1) (6,2) (6,3) (6,4) (6,5)
+    (2,0) (2,1) (2,2) (2,3) (2,4) (2,5) (7,0) (7,1) (7,2) (7,3) (7,4) (7,5)
+    (3,0) (3,1) (3,2) (3,3) (3,4) (3,5) (8,0) (8,1) (8,2) (8,3) (8,4) (8,5)
+    (4,0) (4,1) (4,2) (4,3) (4,4) (4,5) (9,0) (9,1) (9,2) (9,3) (9,4) (9,5)
+"""
 keymap = [
     [
-        ["A", "B", "C"],
-        ["Kc1", "Kc2", "Kc3"],
-        ["LCtrl", "MO(1)", "LShift"],
-        ["OSL(1)", "LT(2, Kc9)", "LM(1, LShift | LGui)"]
+        [k!(Grave),  k!(Kc1),  k!(Kc2),  k!(Kc3), k!(Kc4),        k!(Kc5),   k!(Kc6), k!(Kc7), k!(Kc8),   k!(Kc9),  k!(Kc0),       k!(Delete),],
+        [k!(Tab),    k!(Q),    k!(W),    k!(E),   k!(R),          k!(T),     k!(Y),   k!(U),   k!(I),     k!(O),    k!(P),         k!(Minus), ],
+        [k!(Escape), k!(A),    k!(S),    k!(D),   k!(F),          k!(G),     k!(H),   k!(J),   k!(K),     k!(L),    k!(Semicolon), k!(Quote), ],
+        [k!(LShift), k!(Z),    k!(X),    k!(C),   k!(V),          k!(B),     k!(N),   k!(M),   k!(Comma), k!(Dot),  k!(Slash),     k!(RShift),],
+        [k!(LCtrl),  k!(LGui), k!(LAlt), mo!(1),  k!(Backspace), k!(Space),  mo!(2),  mo!(3),  k!(RAlt),  k!(RGui), k!(RCtrl),     k!(Escape),]
     ],
     [
-        ["_", "TT(1)", "TG(2)"],
-        ["_", "_", "_"],
-        ["_", "_", "_"],
-        ["_", "_", "_"]
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", ],
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", ],
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", ],
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", ]
     ],
+    [
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", ],
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", ],
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", ],
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", ]
+    ],
+    [
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", ],
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", ],
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", ],
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", ]
+    ]
 ]
 
 [light]
@@ -42,8 +62,6 @@ keymap = [
 # Just ignore if no light pin is used for it
 # numslock.pin = "PA5"
 # numslock.low_active = true
-
-
 
 [storage]
 # Storage feature is enabled by default
