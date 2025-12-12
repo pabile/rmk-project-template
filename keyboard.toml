@@ -5,8 +5,9 @@ product_name = "Pabile60"
 vendor_id = 0x8065
 product_id = 0x4643
 manufacturer = "Pabile"
-board = "pi_pico_w"
-#chip = "rp2040"
+chip = "rp2040"
+#12/12 Error: "The specified chip/board 'pi_pico_w' does not exist in the template repo"
+#board = "pi_pico_w"
 
 [ble]
 enabled = true
