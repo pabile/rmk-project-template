@@ -2,8 +2,8 @@
 [keyboard]
 name = "Pabile60"
 product_name = "Pabile60"
-vendor_id = "0x8065"
-product_id = "0x4643"
+vendor_id = 0x8065
+product_id = 0x4643
 manufacturer = "Pabile"
 board = "pi_pico_w"
 #chip = "rp2040"
