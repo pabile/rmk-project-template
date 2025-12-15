@@ -57,4 +57,4 @@ keymap = [
 # enabled = false
 
 [ble]
-#enabled = true
+enabled = true
