@@ -7,7 +7,7 @@ product_id = 0x4643
 manufacturer = "Pabile"
 #chip = "rp2040"
 #12/12 Error: "The specified chip/board 'pi_pico_w' does not exist in the template repo"
-board = "Pi Pico W"
+board = "pico_w"
 
 [matrix]
 # Input and output pins are mandatory
