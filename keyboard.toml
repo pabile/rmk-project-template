@@ -20,8 +20,8 @@ col_pins = ["PIN_21", "PIN_2", "PIN_6", "PIN_7", "PIN_9", "PIN_10"]
 # row2col = true
 
 [layout]
-rows = 6
-cols = 10
+cols = 6
+rows = 10
 layers = 4
 matrix_map = """
 (0,0) (0,1) (0,2) (0,3) (0,4) (0,5) 
