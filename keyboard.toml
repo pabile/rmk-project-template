@@ -11,7 +11,8 @@ board = "pico_w"
 
 [matrix]
 # Input and output pins are mandatory
-row_pins = ["PIN_31", "PIN_29", "PIN_27", "PIN_26", "PIN_25", "PIN_24", "PIN_22", "PIN_11", "PIN_14", "PIN_15"]
+#row0= PIN_31
+row_pins = ["PIN_30", "PIN_29", "PIN_27", "PIN_26", "PIN_25", "PIN_24", "PIN_22", "PIN_11", "PIN_14", "PIN_15"]
 col_pins = ["PIN_21", "PIN_2", "PIN_6", "PIN_7", "PIN_9", "PIN_10"]
 # WARNING: Currently row2col/col2row is set in RMK's feature gate, configs here do nothing actually
 # row2col = true
