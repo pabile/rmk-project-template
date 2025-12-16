@@ -5,14 +5,13 @@ product_name = "Pabile60"
 vendor_id = 0x8065
 product_id = 0x4643
 manufacturer = "Pabile"
-#chip = "rp2040"
+chip = "rp2040"
 #12/12 Error: "The specified chip/board 'pi_pico_w' does not exist in the template repo"
-board = "pico_w"
+#board = "pico_w"
+usb_enable = true
 
 [matrix]
 # Input and output pins are mandatory
-#row_pins = ["PIN_31", "PIN_29", "PIN_27", "PIN_26", "PIN_25", "PIN_24", "PIN_22", "PIN_11", "PIN_14", "PIN_15"]
-#col_pins = ["PIN_21", "PIN_2", "PIN_6", "PIN_7", "PIN_9", "PIN_10"]
 row_pins = ["PIN_26", "PIN_22", "PIN_21", "PIN_20", "PIN_19", "PIN_18", "PIN_17", "PIN_8", "PIN_10", "PIN_11"]
 col_pins = ["PIN_16", "PIN_1", "PIN_4", "PIN_5", "PIN_6", "PIN_7"]
 # WARNING: Currently row2col/col2row is set in RMK's feature gate, configs here do nothing actually
@@ -60,3 +59,10 @@ keymap = [
 
 [ble]
 enabled = true
+
+[host]
+# Enable or disable Vial support (default: true)
+vial_enabled = true
+# Unlock keys for Vial security (optional)
+# Keys must be pressed simultaneously to unlock Vial configuration
+unlock_keys = [[0, 0], [0, 1]]  # Keys at (row=0,col=0) and (row=0,col=1)
