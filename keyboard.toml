@@ -5,9 +5,10 @@ product_name = "Pabile60"
 vendor_id = 0x8065
 product_id = 0x4643
 manufacturer = "Pabile"
-chip = "rp2040"
+#12/16 chip rp2040 gives error related to cyw43 and probably more.
+#chip = "rp2040"
 #12/12 Error: "The specified chip/board 'pi_pico_w' does not exist in the template repo"
-#board = "pico_w"
+board = "pico_w"
 usb_enable = true
 
 [matrix]
@@ -65,4 +66,4 @@ enabled = true
 vial_enabled = true
 # Unlock keys for Vial security (optional)
 # Keys must be pressed simultaneously to unlock Vial configuration
-unlock_keys = [[0, 0], [0, 1]]  # Keys at (row=0,col=0) and (row=0,col=1)
+# unlock_keys = [[0, 0], [0, 1]]  # Keys at (row=0,col=0) and (row=0,col=1)
